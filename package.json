@@ -1,6 +1,5 @@
 {
     "name": "pixjs",
-    "version": "1.0.0",
     "description": "A minimalist NodeJS display module",
     "main": "pix.js",
     "scripts": {
