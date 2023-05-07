@@ -1,0 +1,15 @@
+{
+  "name": "pixjs",
+  "version": "1.0.0",
+  "description": "A simple grid display for Node JS",
+  "main": "pix.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/ToasterWaffles86/PixJS"
+  },
+  "author": "ToasterWaffles86",
+  "license": "ISC"
+}
