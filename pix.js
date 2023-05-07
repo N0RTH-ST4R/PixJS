@@ -17,8 +17,8 @@ class pixScreen{
         }else if(this.width<8){
             this.width=8
         }
-        if(this.height>64){
-            this.height=64
+        if(this.height>32){
+            this.height=32
         }else if(this.height<8){
             this.height=8
         }
