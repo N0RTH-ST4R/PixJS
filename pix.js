@@ -5,10 +5,11 @@ class pixScreen{
      * @param {int} width
      * @param {int} height
      */
-    constructor(border,width,height){
-        this.border=border
+    constructor(width,height){
+        this.border=true
         this.width=width
         this.height=height
+        this.hasInit=false
         this.data=[]
     }
     init=function(){
@@ -28,6 +29,7 @@ class pixScreen{
                 this.data[y][x]="0"
             }
         }
+        this.hasInit=true
     }
     setPixel=function(x,y,val){
         /**
@@ -38,7 +40,24 @@ class pixScreen{
          */
         this.data[y][x]=val
     }
+    drawShape=function(itemX,itemY,item){
+        if(itemX+item[0].length>this.width){
+            throw new Error("item does not fit the screen")
+        }
+        if(itemY+item.length>this.height){
+            throw new Error("item does not fit the screen")
+        }
+        for(let y=0;y<item.length;y++){
+            for(let x=0;x<item[y].length;x++){
+                this.setPixel(itemX+x,itemY+y,item[y][x])
+            }
+        }
+    }
     update=function(){
+        if(!this.hasInit){
+            this.init()
+            this.hasInit=true
+        }
         for(let y=0;y<this.data.length;y++){
             for(let x=0;x<this.data[y].length;x++){
                 if(this.data[y][x]==1){
