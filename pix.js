@@ -12,6 +12,16 @@ class pixScreen{
         this.data=[]
     }
     init=function(){
+        if(this.width>64){
+            this.width=64
+        }else if(this.width<8){
+            this.width=8
+        }
+        if(this.height>64){
+            this.height=64
+        }else if(this.height<8){
+            this.height=8
+        }
         for(let y=0;y<this.height;y++){
             this.data.push([])
             for(let x=0;x<this.width;x++){
