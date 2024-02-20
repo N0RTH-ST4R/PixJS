@@ -9,7 +9,7 @@ screen.init()
 
 //draw "HI" shape
 screen.drawShape(29,15,[
-    [1,0,1,0,1,1,1], //remember: 1 = solid, 0 = blank
+    [1,0,1,0,1,1,1], //remember: 1 = filled, 0 = unfilled
     [1,1,1,0,0,1,0],
     [1,0,1,0,1,1,1]
 ])
